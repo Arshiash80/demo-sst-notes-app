@@ -1,4 +1,5 @@
 import { StorageStack } from "./StorageStack"
+import { ApiStack } from "./ApiStack";
 
 export default function main(app) {
   app.setDefaultFunctionProps({
@@ -9,5 +10,5 @@ export default function main(app) {
     },
   });
 
-  app.stack(StorageStack);
+  app.stack(StorageStack).stack(ApiStack)
 }
